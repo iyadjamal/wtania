@@ -1,0 +1,30 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.watania.sharenumber"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "com.watania.sharenumber"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.watania.sharenumber"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.watania.sharenumber"
+    },
+    "com.jsmobile.plugins.sms": {
+      "PACKAGE_NAME": "com.watania.sharenumber"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.watania.sharenumber"
+    }
+  },
+  "dependent_plugins": {}
+}

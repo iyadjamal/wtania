@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <script type="text/javascript" src="../cordova.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        html, body
+        {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Hello World</title>
+</head>
+<body style="background-color:white;text-align:center">
+<div class = "upperBar" style = "position: fixed;
+            width: 100%;
+            height: 5px;
+            top:0px;
+            left: 0px;
+            background-color: #DB1F31;"></div>
+
+
+<img style = "width: 150px; margin-bottom: 30px; margin-top: 100px;"  class = "logo-image-login" src = "../img/contacticon.png"/>
+
+<div style = "width: 100%; align-content:center; text-align: center;">
+
+    <div  class = "login-form" style = "background-color: white;
+            border: 1px solid #E6E6E6;
+            border-radius: 10px;
+            padding: 25px;
+            padding-top: 40px;
+            text-align: center;
+            width: 80%; margin-left: 10%;
+            " >
+        <form  id="submit" method="post" action="../index.html" display = "none" enctype="multipart/form-data">
+
+            <input id="email" required style = "text-align: center;
+                   width: 96%;
+                   padding: 12px;
+                   margin-top: 8px;
+                   margin-left: 2%;
+                   box-sizing: border-box;
+                   border-radius: 5px;
+                   border: 0.5px solid #E6E6E6;
+                   outline: none;
+                   " type="email" ref = "name" name="login-email" placeholder = "Email"/><br/>
+            <input id="pass" required style = "text-align: center;
+                   width: 96%;
+                   padding: 12px;
+                   margin-top: 8px;
+                   margin-left: 2%;
+                   box-sizing: border-box;
+                   border-radius: 5px;
+                   border: 0.5px solid #E6E6E6;
+                   outline: none;
+                   " type="password" ref = "name" name="login-email" placeholder = "Password"/><br/>
+            <input id="phone" required style = " text-align: center;
+                   width: 96%;
+                   padding: 12px;
+                   margin-left: 2%;
+                   margin-top: 8px;
+                   box-sizing: border-box;
+                   border-radius: 5px;
+                   outline: none ;
+                   border: 0.5px solid #E6E6E6;" type="tel" ref = "loginNumber" name="login-number" placeholder = "Mobile Number"/><br/>
+
+            <input style = "background-color: #DB1F31;
+                color: #ffffff;
+                text-align: center;
+                width: 96%;
+                margin-left: 2%;
+                padding: 12px;
+                margin-top: 8px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                border: 0;
+                outline: none;
+                "
+
+                   type="submit" value="Register" ref = "loginButton" name = "login-button" />
+        </form>
+    </div>
+
+</div>
+<script src="reg.js"></script>
+
+
+</body>
+</html>

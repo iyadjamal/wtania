@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/hazems/cordova-sms-plugin.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/hazems/cordova-sms-plugin.git",
+        "spec": "git+https://github.com/hazems/cordova-sms-plugin.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:hazems/cordova-sms-plugin.git",
+          "sshUrl": "git+ssh://git@github.com/hazems/cordova-sms-plugin.git",
+          "httpsUrl": "git+https://github.com/hazems/cordova-sms-plugin.git",
+          "gitUrl": "git://github.com/hazems/cordova-sms-plugin.git",
+          "shortcut": "github:hazems/cordova-sms-plugin",
+          "directUrl": "https://raw.githubusercontent.com/hazems/cordova-sms-plugin/master/package.json"
+        }
+      },
+      "C:\\Users\\iyad\\wtania"
+    ]
+  ],
+  "_from": "git+https://github.com/hazems/cordova-sms-plugin.git",
+  "_id": "hazems-cordova-plugin-sms@0.0.2",
+  "_inCache": true,
+  "_location": "/hazems-cordova-plugin-sms",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/hazems/cordova-sms-plugin.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/hazems/cordova-sms-plugin.git",
+    "spec": "git+https://github.com/hazems/cordova-sms-plugin.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:hazems/cordova-sms-plugin.git",
+      "sshUrl": "git+ssh://git@github.com/hazems/cordova-sms-plugin.git",
+      "httpsUrl": "git+https://github.com/hazems/cordova-sms-plugin.git",
+      "gitUrl": "git://github.com/hazems/cordova-sms-plugin.git",
+      "shortcut": "github:hazems/cordova-sms-plugin",
+      "directUrl": "https://raw.githubusercontent.com/hazems/cordova-sms-plugin/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/hazems/cordova-sms-plugin.git#2041f0a0f26e92b1e807d52f2dc2c905536c542f",
+  "_shasum": "1b9d6ed6831b5b357d08d6c87266d587726d15b0",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/hazems/cordova-sms-plugin.git",
+  "_where": "C:\\Users\\iyad\\wtania",
+  "author": {
+    "name": "Hazem Saleh"
+  },
+  "bugs": {
+    "url": "https://github.com/hazems/cordova-sms-plugin/issues"
+  },
+  "cordova": {
+    "id": "com.jsmobile.plugins.sms",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8"
+    ]
+  },
+  "dependencies": {},
+  "description": "A plugin for sending sms messages",
+  "devDependencies": {},
+  "gitHead": "2041f0a0f26e92b1e807d52f2dc2c905536c542f",
+  "homepage": "https://github.com/hazems/cordova-sms-plugin#readme",
+  "keywords": [
+    "cordova",
+    "plugins",
+    "sms",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8"
+  ],
+  "license": "Apache 2.0",
+  "name": "hazems-cordova-plugin-sms",
+  "optionalDependencies": {},
+  "readme": "Notice:\r\n====================\r\nThis plugin is one of the examples of the [\"JavaScript Mobile Application Development\"](https://www.packtpub.com/web-development/javascript-native-mobile-apps-development) book which can be reached at: <br> \r\n[http://www.amazon.com/JavaScript-Native-Mobile-Apps-Development/dp/1783554177/](http://www.amazon.com/JavaScript-Native-Mobile-Apps-Development/dp/1783554177/) <br>\r\n[https://www.packtpub.com/web-development/javascript-native-mobile-apps-development](http://www.amazon.com/JavaScript-Native-Mobile-Apps-Development/dp/1783554177/) \r\n\r\nSms Custom Cordova Plugin:\r\n====================\r\nThis plugin allows you to send SMS message to a specific phone number for Android, iOS and Windows Platform 8. Here is an example below:\r\n\r\n\r\n\tvar messageInfo = {\r\n\t\tphoneNumber: \"xxxxxxxxxx\",\r\n\t\ttextMessage: \"This is a test message\"\r\n\t};\r\n\t\r\n\tsms.sendMessage(messageInfo, function(message) {\r\n\t\tconsole.log(\"success: \" + message);\r\n\t}, function(error) {\r\n\t\tconsole.log(\"code: \" + error.code + \", message: \" + error.message);\r\n\t});\r\n\t\r\nAs you notice you just need to call *sms.sendMessage(messageInfo, successCallback, failureCallback)*:\r\n\r\n * *messageInfo* is a JSON object which contains phoneNumber and textMessage attributes.\r\n * *sucessCallback* is a callback function which will be called if the send SMS operation succeeds.\r\n * *errorCallback* is a callback function which will be called if the send SMS operation fails.\r\n\r\nInstalling the plugin\r\n---\r\nIn order to install the plugin you can:\r\n\r\nInstall it from NPM registry as follows:\r\n\r\n\tnpm i hazems-cordova-plugin-sms\r\n\r\n \r\nor simply use the following Cordova CLI command: \r\n\t\r\n\tcordova plugin add https://github.com/hazems/cordova-sms-plugin.git\r\n\t\r\nor\r\n\r\n\tcordova plugin add com.jsmobile.plugins.sms\r\n\r\n\r\n\r\nImportant Note\r\n---\r\nFor iOS and Windows Phone platforms, it is not possible to send SMS directly without opening the default device SMS application. This means that the API will only open and track the SMS application events (cancel, successful sending, un-successful sending, ...etc) in iOS platform. For Windows Phone 8, the plugin will only open the SMS application without tracking its events because tracking SMS application events is not currently applicable in Windows 8 platform.\r\n\r\nTest Client\r\n---\r\nYou can reach the test client of this plugin here:\r\n [https://github.com/hazems/cordova-sms-plugin-test/ ](https://github.com/hazems/cordova-sms-plugin-test/)\r\n\r\nUsed Resources\r\n---\r\nSpecial Thanks to [appcoda.com]() for helping me in implementing the iOS part of this plugin:\r\n\r\n[http://www.appcoda.com/ios-programming-send-sms-text-message/ ](http://www.appcoda.com/ios-programming-send-sms-text-message/)\r\n\r\nLicence\r\n---\r\nIt is Apache License, Version 2.0. Feel free to fork the project and send pull requests if you have any.\r\n ",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hazems/cordova-sms-plugin.git"
+  },
+  "version": "0.0.2"
+}

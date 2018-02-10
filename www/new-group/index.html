@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!--<script src="../js/index.js"></script>-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <title>Hello World</title>
+				<style>
+			div{ overflow: hidden}
+			/*body{overflow: hidden}*/
+		</style>
+    </head>
+    <body style="background-color:white;">
+<div style="width: 100%; background-color: #DB1F31; float: left;position: fixed; z-index: 100;text-align:center;height:60px">
+        <div class="Logo" style="float: left;width: 100%;text-align:center;font-size:30px;color:white">
+
+            <img style = "width: 50px; margin-top:5px;"  class = "logo-image-login" src = "../img/app-icon.png"/>
+						<!--<a href="index.html" class="btn btn-danger" style="margin-top:12px;float:right;margin-right:10px ;background-color:#DB1F31;">Add Group</a>-->
+	
+        </div>
+    </div>
+	<div class="content" style="float: left;background-color:white;margin-top:70px;width:100%;max-width:100%;padding-bottom:25px">
+		<form method="post" action="query.php" enctype="multipart/form-data">
+			<div class="form-group col-xs-12">
+				<label>Search:</label>
+				<input name="name" type="text" class="form-control" id="pwd" required="" value=" ">
+			</div>
+		
+
+
+		</form>
+        <div style=' width:100%; padding-left: 20px;margin-bottom: 0px;border-bottom:black 1px solid;'>
+            <a  class=' show-all' style='font-size:22px' type='submit' value='Map'>
+                <!--<span style='color:black;' class='glyphicon glyphicon glyphicon-chevron-down'>-->
+
+                <!--</span>-->
+            </a>
+            <span style='font-size:30px'>Online Users</span>
+        </div>
+        <table class='table ' style=' margin-left: 20px; width:97%'>
+            <tr><td>Iyad</td></tr>
+            <tr><td></td></tr>
+        </table>
+	</div>
+    <div class="footer" style="bottom:0;text-align: center;width: 100%;position:fixed; background-color: #DB1F31; color:white">
+        <a href="../invite-contacts/index.html" class="btn munu-element" type="submit" value="Map"><span style="color:white;margin-right: 15px;" class="glyphicon glyphicon-briefcase"></span></a>
+        <a href="../main/index.html" class="btn munu-element" type="submit" value="List Of Places"><span style="color:white;margin-right: 15px;" class="glyphicon glyphicon-th-list"></span></a>
+        <a href="../new-group/index.html" class="btn munu-element" type="submit" value="About"> <span style="color:white;margin-right: -5px;" class="glyphicon glyphicon-user"></span><span style="color:white;margin-right: 15px;" class="glyphicon glyphicon-user"></span></a>
+        <a href="../help/index.html" class="btn munu-element" type="submit" value="Help"><span style="color:white;margin-right: 15px;" class="glyphicon glyphicon-question-sign"></span></a>
+        <a href="#" class="btn munu-element" type="submit" value="Map"><span style="color:white;" class="glyphicon glyphicon-refresh"></span></a>
+    </div>
+
+        <script type="text/javascript" src="../cordova.js"></script>
+        <!--<script type="text/javascript" src="js/index.js"></script>-->
+    </body>
+</html>
